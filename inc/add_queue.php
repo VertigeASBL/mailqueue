@@ -27,4 +27,6 @@ function inc_add_queue_dist($id_mailqueue, $email) {
             'statut' => 'tosend'
         )
     );
+
+    return $id_queue;
 }
