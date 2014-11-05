@@ -67,7 +67,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 
 	);
 
-	$tables['spip_mailqueu_destinataire'] = array(
+	$tables['spip_mailqueu_destinataires'] = array(
 		'type' => 'mailqueu_destinataire',
 		'principale' => "oui", 
 		'table_objet_surnoms' => array('mailqueudestinataire', 'mailqueu_destinataire'), // table_objet('mailqueu_destinataire') => 'mailqueu_destinataire' 
