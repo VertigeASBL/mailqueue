@@ -47,5 +47,6 @@
 
 	<pipeline nom="declarer_tables_objets_sql" inclure="base/mailqueue.php" />
 	<pipeline nom="declarer_tables_interfaces" inclure="base/mailqueue.php" />
+	<pipeline nom="taches_generales_cron" inclure="mailqueue_pipelines.php" />
 
 </paquet>
