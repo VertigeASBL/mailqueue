@@ -6,16 +6,16 @@
 	compatibilite="[3.0.17;3.0.*]"
 	logo="prive/themes/spip/images/mailqueue-64.png"
 	documentation=""
-	schema="1.0.0" 
+	schema="1.0.0"
 >
 	<!--
 		Paquet genere le 2014-11-05 09:50:27
-		(Vous pouvez bien entendu supprimer ces commentaires) 
+		(Vous pouvez bien entendu supprimer ces commentaires)
 	-->
 
 	<nom>API Mailqueue</nom>
 
-	<!-- cette balise peut etre presente plusieurs fois s'il y a plusieurs auteurs --> 
+	<!-- cette balise peut etre presente plusieurs fois s'il y a plusieurs auteurs -->
 	<auteur lien='http://www.vertige.org'>Vertige (Didier)</auteur>
 
 	<licence>GNU/GPL</licence>
@@ -29,22 +29,22 @@
 		* pipelines
 		<pipeline nom="autoriser" inclure="mailqueue_autorisations.php" />
 		<pipeline nom="insert_head" inclure="mailqueue_pipelines.php" />
-		* declarer un pipeline 
+		* declarer un pipeline
 		<pipeline nom="mon_pipeline" action="" />
 		* parents de menus de SPIP :
 				menu_accueil (A eviter), menu_edition, menu_publication,
-				menu_activite, menu_squelette, menu_administration, menu_configuration 
+				menu_activite, menu_squelette, menu_administration, menu_configuration
 		<menu nom="mailqueue" titre="mailqueue:mailqueue_titre" parent="menu_edition"  icone="images/mailqueue-16.png" />
-		* parents d'onglets... configuration, plugins, statistiques, ... 
+		* parents d'onglets... configuration, plugins, statistiques, ...
 		<onglet nom="mailqueue" titre="mailqueue:mailqueue_titre" parent="configuration" icone="images/mailqueue-24.png" />
 	-->
 
 	<necessite nom="saisies"  compatibilite="[1.24.0;]" />
 	<necessite nom="facteur" compatibilite="[3.0.14;]" />
 
-	<pipeline nom="autoriser" inclure="mailqueue_autorisations.php" /> 
+	<pipeline nom="autoriser" inclure="mailqueue_autorisations.php" />
 
-	<pipeline nom="declarer_tables_objets_sql" inclure="base/mailqueue.php" /> 
-	<pipeline nom="declarer_tables_interfaces" inclure="base/mailqueue.php" /> 
+	<pipeline nom="declarer_tables_objets_sql" inclure="base/mailqueue.php" />
+	<pipeline nom="declarer_tables_interfaces" inclure="base/mailqueue.php" />
 
 </paquet>
