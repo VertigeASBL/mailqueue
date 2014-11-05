@@ -51,7 +51,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 			"texte"              => "text NOT NULL DEFAULT ''",
 			"date_start"         => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'",
 			"etat"               => "text NOT NULL DEFAULT ''",
-			"date"               => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'", 
+			"date"               => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'",
 			"maj"                => "TIMESTAMP"
 		),
 		'key' => array(
@@ -63,14 +63,14 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 		'champs_versionnes' => array('sujet', 'html', 'texte', 'date_start', 'etat'),
 		'rechercher_champs' => array(),
 		'tables_jointures'  => array(),
-		
+
 
 	);
 
 	$tables['spip_mailqueu_destinataires'] = array(
 		'type' => 'mailqueu_destinataire',
-		'principale' => "oui", 
-		'table_objet_surnoms' => array('mailqueudestinataire', 'mailqueu_destinataire'), // table_objet('mailqueu_destinataire') => 'mailqueu_destinataire' 
+		'principale' => "oui",
+		'table_objet_surnoms' => array('mailqueudestinataire', 'mailqueu_destinataire'), // table_objet('mailqueu_destinataire') => 'mailqueu_destinataire'
 		'field'=> array(
 			"id_mailqueu" => "bigint(21) NOT NULL",
 			"email"              => "text NOT NULL DEFAULT ''",
@@ -88,7 +88,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 		'champs_versionnes' => array('email', 'date_envoie', 'statut'),
 		'rechercher_champs' => array(),
 		'tables_jointures'  => array(),
-		
+
 
 	);
 
