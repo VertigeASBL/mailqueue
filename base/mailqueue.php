@@ -23,8 +23,8 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  */
 function mailqueue_declarer_tables_interfaces($interfaces) {
 
-	$interfaces['table_des_tables']['mailqueus'] = 'mailqueus';
-	$interfaces['table_des_tables']['mailqueu_destinataires'] = 'mailqueu_destinataires';
+	$interfaces['table_des_tables']['mailqueues'] = 'mailqueues';
+	$interfaces['table_des_tables']['mailqueue_destinataires'] = 'mailqueues_destinataires';
 
 	return $interfaces;
 }
@@ -41,11 +41,11 @@ function mailqueue_declarer_tables_interfaces($interfaces) {
  */
 function mailqueue_declarer_tables_objets_sql($tables) {
 
-	$tables['spip_mailqueus'] = array(
-		'type' => 'mailqueu',
+	$tables['spip_mailqueues'] = array(
+		'type' => 'mailqueue',
 		'principale' => "oui",
 		'field'=> array(
-			"id_mailqueu"        => "bigint(21) NOT NULL",
+			"id_mailqueue"        => "bigint(21) NOT NULL",
 			"sujet"              => "text NOT NULL DEFAULT ''",
 			"html"               => "text NOT NULL DEFAULT ''",
 			"texte"              => "text NOT NULL DEFAULT ''",
@@ -55,7 +55,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 			"maj"                => "TIMESTAMP"
 		),
 		'key' => array(
-			"PRIMARY KEY"        => "id_mailqueu",
+			"PRIMARY KEY"        => "id_mailqueue",
             "KEY etat" => "etat"
 		),
 		'titre' => "sujet AS titre, '' AS lang",
@@ -64,17 +64,15 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 		'champs_versionnes' => array('sujet', 'html', 'texte', 'date_start', 'etat'),
 		'rechercher_champs' => array(),
 		'tables_jointures'  => array(),
-
-
 	);
 
-	$tables['spip_mailqueu_destinataires'] = array(
-		'type' => 'mailqueu_destinataire',
+	$tables['spip_mailqueues_destinataires'] = array(
+		'type' => 'mailqueue_destinataire',
 		'principale' => "oui",
-		'table_objet_surnoms' => array('mailqueudestinataire', 'mailqueu_destinataire'), // table_objet('mailqueu_destinataire') => 'mailqueu_destinataire'
+		'table_objet_surnoms' => array('mailqueuedestinataire', 'mailqueue_destinataire'), // table_objet('mailqueu_destinataire') => 'mailqueu_destinataire'
 		'field'=> array(
-			"id_mailqueu" => "bigint(21) NOT NULL",
-			"email"              => "text NOT NULL DEFAULT ''",
+			"id_mailqueue" => "bigint(21) NOT NULL",
+			"email"              => "varchar(320)  DEFAULT '' NOT NULL",
 			"date_envoie"        => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'",
 			"statut"             => "varchar(20)  DEFAULT '' NOT NULL",
 			"maj"                => "TIMESTAMP"
@@ -89,8 +87,6 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 		'champs_versionnes' => array('email', 'date_envoie', 'statut'),
 		'rechercher_champs' => array(),
 		'tables_jointures'  => array(),
-
-
 	);
 
 	return $tables;
