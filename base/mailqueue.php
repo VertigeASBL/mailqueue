@@ -72,15 +72,15 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 		'principale' => "oui", 
 		'table_objet_surnoms' => array('mailqueudestinataire', 'mailqueu_destinataire'), // table_objet('mailqueu_destinataire') => 'mailqueu_destinataire' 
 		'field'=> array(
-			"id_mailqueu_destinataire" => "bigint(21) NOT NULL",
+			"id_mailqueu" => "bigint(21) NOT NULL",
 			"email"              => "text NOT NULL DEFAULT ''",
 			"date_envoie"        => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'",
 			"statut"             => "text NOT NULL DEFAULT ''",
 			"maj"                => "TIMESTAMP"
 		),
 		'key' => array(
-			"PRIMARY KEY"        => "id_mailqueu_destinataire",
-			"KEY statut"         => "statut", 
+            "KEY email" => "email"
+			"KEY statut"         => "statut",
 		),
 		'titre' => "'' AS titre, '' AS lang",
 		 #'date' => "",
