@@ -11,14 +11,8 @@
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
+// Taille d'un lot de mail. (Nombre de mail envoyer)
+define(MAILQUEUE_CADENCE, 10);
 
-/*
- * Un fichier d'options permet de définir des éléments
- * systématiquement chargés à chaque hit sur SPIP.
- *
- * Il vaut donc mieux limiter au maximum son usage
- * tout comme son volume !
- * 
- */
-
-?>
+// Nombre de seconde entre chaque l'envoie (Dépendant du Cron de SPIP cenpendant)
+define(MAILQUEUE_FREQUENCE, 120);
