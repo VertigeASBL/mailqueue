@@ -7,8 +7,8 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 /**
  * Fonction d'ajout d'email à une mailqueue
  *
- * @param mixed $id_mailqueue
- * @param mixed $email
+ * @param int $id_mailqueue
+ * @param string $email
  * @access public
  */
 function inc_add_queue_dist($id_mailqueue, $email) {
