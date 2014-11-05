@@ -19,12 +19,13 @@ function inc_add_queue_dist($id_mailqueue, $email) {
     if (!$verifier($email, 'email'))
         return false;
 
+    include_spip('action/editer_objet');
     $id_queue = objet_inserer(
         'mailqueue_destinataire',
         null,
         array(
             'email' => $email,
-            'statut' => 'tosend'
+            'statut' => 'attente'
         )
     );
 

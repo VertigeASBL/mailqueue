@@ -17,6 +17,7 @@ function inc_mailqueue_dist($sujet, $html=null, $texte=null) {
     if (empty($html) and empty($texte))
         return false;
 
+    include_spip('action/editer_objet');
     // A prioris on a pas besoin de gérer plus de chose, facteur ce dérbouillera avec html et/ou texte
     $id_mailqueue = objet_inserer(
         'mailqueue',
@@ -25,11 +26,9 @@ function inc_mailqueue_dist($sujet, $html=null, $texte=null) {
             'sujet' => $sujet,
             'html' => $html,
             'texte' => $texte,
-            'etat' => 'attente'
+            'etat' => 'envoie'
         )
     );
-
-
 
     return $id_mailqueue;
 }
