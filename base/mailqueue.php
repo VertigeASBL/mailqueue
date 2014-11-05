@@ -50,7 +50,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 			"html"               => "text NOT NULL DEFAULT ''",
 			"texte"              => "text NOT NULL DEFAULT ''",
 			"date_start"         => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'",
-			"etat"               => "text NOT NULL DEFAULT ''",
+			"etat"               => "varchar(20)  DEFAULT '' NOT NULL",
 			"date"               => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'",
 			"maj"                => "TIMESTAMP"
 		),
@@ -76,7 +76,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 			"id_mailqueu" => "bigint(21) NOT NULL",
 			"email"              => "text NOT NULL DEFAULT ''",
 			"date_envoie"        => "datetime NOT NULL DEFAULT '0000-00-00 00:00:00'",
-			"statut"             => "text NOT NULL DEFAULT ''",
+			"statut"             => "varchar(20)  DEFAULT '' NOT NULL",
 			"maj"                => "TIMESTAMP"
 		),
 		'key' => array(
