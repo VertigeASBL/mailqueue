@@ -1,0 +1,35 @@
+[(#SET{defaut_tri,#ARRAY{
+	id_mailqueu_destinataire,1,
+	points,-1
+}})]<B_liste_mailqueu_destinataire>
+#ANCRE_PAGINATION
+<div class="liste-objets mailqueu_destinataire">
+<table class='spip liste'>
+	[<caption><strong class="caption">(#ENV*{titre,#GRAND_TOTAL|singulier_ou_pluriel{mailqueu_destinataire:info_1_mailqueu_destinataire,mailqueu_destinataire:info_nb_mailqueu_destinataire}})</strong></caption>]
+	<thead>
+		<tr class='first_row'>
+			<th class='picto' scope='col'></th>
+			<th class='statut' scope='col'>[(#TRI{statut,<span title="<:lien_trier_statut|attribut_html:>">#</span>,ajax})]</th> 
+			<th class='' scope='col'>[(#TRI{,<:mailqueu_destinataire:champ__label:>,ajax})]</th>
+			<th class='id' scope='col'>[(#TRI{id_mailqueu_destinataire,<:info_numero_abbreviation:>,ajax})]</th>
+		</tr>
+	</thead>
+	<tbody>
+	<BOUCLE_liste_mailqueu_destinataire(MAILQUEU_DESTINATAIRE){id_mot?}{id_auteur?}{where?}{statut?}{recherche?}{tri #ENV{par,num },#GET{defaut_tri}}{par }{pagination #ENV{nb,10}}>
+		<tr class='[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]'>
+			<td class='picto'>[(#CHEMIN_IMAGE{mailqueu_destinataire-16.png}|balise_img)]</td>
+			<td class='statut'>[(#STATUT|puce_statut{mailqueu_destinataire,#ID_MAILQUEU_DESTINATAIRE})]</td> 
+			<td class=' principale'>[(#LOGO_MAILQUEU_DESTINATAIRE|image_reduire{20,26})]<a href="[(#ID_MAILQUEU_DESTINATAIRE|generer_url_entite{mailqueu_destinataire})]" title="<:info_numero_abbreviation|attribut_html:> #ID_MAILQUEU_DESTINATAIRE">[(#RANG). ]#</a></td>
+			<td class='id'>[(#AUTORISER{modifier,mailqueu_destinataire,#ID_MAILQUEU_DESTINATAIRE}|?{
+				<a href="[(#URL_ECRIRE{mailqueu_destinataire_edit,id_mailqueu_destinataire=#ID_MAILQUEU_DESTINATAIRE})]">#ID_MAILQUEU_DESTINATAIRE</a>,
+				#ID_MAILQUEU_DESTINATAIRE
+			})]</td>
+		</tr>
+	</BOUCLE_liste_mailqueu_destinataire>
+	</tbody>
+</table>
+[<p class='pagination'>(#PAGINATION{prive})</p>]
+</div>
+</B_liste_mailqueu_destinataire>[
+<div class="liste-objets mailqueu_destinataire caption-wrap"><strong class="caption">(#ENV*{sinon,''})</strong></div>
+]<//B_liste_mailqueu_destinataire>

@@ -1,0 +1,28 @@
+<BOUCLE_mailqueu(MAILQUEUS){id_mailqueu}>
+
+[<div class="champ contenu_sujet[ (#SUJET*|strlen|?{'',vide})]">
+	<label><:mailqueu:champ_sujet_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{sujet} sujet'>(#SUJET)</span>
+</div>]
+
+[<div class="champ contenu_html[ (#HTML*|strlen|?{'',vide})]">
+	<label><:mailqueu:champ_html_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{html} html'>(#HTML)</span>
+</div>]
+
+[<div class="champ contenu_texte[ (#TEXTE*|strlen|?{'',vide})]">
+	<label><:mailqueu:champ_texte_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{texte} texte'>(#TEXTE)</span>
+</div>]
+
+[<div class="champ contenu_date_start[ (#DATE_START*|strlen|?{'',vide})]">
+	<label><:mailqueu:champ_date_start_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{date_start} date_start'>(#DATE_START)</span>
+</div>]
+
+[<div class="champ contenu_etat[ (#ETAT*|strlen|?{'',vide})]">
+	<label><:mailqueu:champ_etat_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{etat} etat'>(#ETAT)</span>
+</div>]
+
+</BOUCLE_mailqueu>

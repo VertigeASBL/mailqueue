@@ -1,0 +1,18 @@
+<BOUCLE_mailqueu_destinataire(MAILQUEU_DESTINATAIRE){id_mailqueu_destinataire}{statut?}>
+
+[<div class="champ contenu_email[ (#EMAIL*|strlen|?{'',vide})]">
+	<label><:mailqueu_destinataire:champ_email_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{email} email'>(#EMAIL)</span>
+</div>]
+
+[<div class="champ contenu_date_envoie[ (#DATE_ENVOIE*|strlen|?{'',vide})]">
+	<label><:mailqueu_destinataire:champ_date_envoie_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{date_envoie} date_envoie'>(#DATE_ENVOIE)</span>
+</div>]
+
+[<div class="champ contenu_statut[ (#STATUT*|strlen|?{'',vide})]">
+	<label><:mailqueu_destinataire:champ_statut_label:> : </label>
+	<span dir='#LANG_DIR' class='#EDIT{statut} statut'>(#STATUT)</span>
+</div>]
+
+</BOUCLE_mailqueu_destinataire>
