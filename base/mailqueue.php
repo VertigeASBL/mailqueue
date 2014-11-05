@@ -80,7 +80,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 			"maj"                => "TIMESTAMP"
 		),
 		'key' => array(
-            "KEY email" => "email"
+            "KEY email" => "email",
 			"KEY statut"         => "statut",
 		),
 		'titre' => "'' AS titre, '' AS lang",
