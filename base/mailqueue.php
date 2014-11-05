@@ -56,6 +56,7 @@ function mailqueue_declarer_tables_objets_sql($tables) {
 		),
 		'key' => array(
 			"PRIMARY KEY"        => "id_mailqueu",
+            "KEY etat" => "etat"
 		),
 		'titre' => "sujet AS titre, '' AS lang",
 		'date' => "date",
