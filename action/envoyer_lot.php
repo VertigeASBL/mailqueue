@@ -11,6 +11,8 @@ function test_fin_queue($id_mailqueue) {
         'spip_mailqueues_destinataires',
         'id_mailqueue='.intval($id_mailqueue).' AND statut='.sql_quote('attente'));
 
+    spip_log('Reste: '.$destinataires, 'mailqueue');
+
     //Si il n'y a plus de destinataire, rideau !
     if ($destinataires <= 0)
         objet_modifier('mailqueue', $id_mailqueue, array('etat' => 'termine'));
@@ -51,6 +53,8 @@ function action_envoyer_lot_dist() {
         'etat='.sql_quote('envoie')
     );
 
+    spip_log($mailqueues, 'mailqueue');
+
     // pour chaque mailqueue, on va envoyer un lot de mail
     foreach ($mailqueues as $mailqueue) {
         // Séléction du prochain lot
@@ -62,6 +66,8 @@ function action_envoyer_lot_dist() {
             '', // Order by on s'en fou aussi
             MAILQUEUE_CADENCE // On limite selon la configuration de la cadence
         );
+
+        spip_log($lot, 'mailqueue');
 
         foreach ($lot as $email) {
             $test_envoie = $envoyer_mail(
