@@ -16,7 +16,7 @@ function inc_add_queue_dist($id_mailqueue, $email) {
     // On vérifie l'email avant de l'ajouter,
     // on ne sais jamais, les gens ne sont pas tous sain d'esprit
     $verifier = charger_fonction('verifier', 'inc');
-    if (!$verifier($email, 'email'))
+    if ($verifier($email, 'email'))
         return false;
 
     include_spip('action/editer_objet');
