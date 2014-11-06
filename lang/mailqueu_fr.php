@@ -10,11 +10,18 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'ajouter_lien_mailqueu' => 'Ajouter cette mailqueu',
 
 	// C
+    'champ_ID' => 'ID',
 	'champ_date_start_label' => 'Date de début',
 	'champ_etat_label' => 'Etat',
 	'champ_html_label' => 'html',
 	'champ_sujet_label' => 'Sujet',
 	'champ_texte_label' => 'Texte',
+
+    // D
+    'decompte' => 'Décompte',
+
+    //
+    'echec_envoie' => '@nb@ echec',
 
 	// I
 	'icone_creer_mailqueu' => 'Créer une mailqueu',
@@ -39,5 +46,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_mailqueus' => 'Mailqueus',
 	'titre_mailqueus_rubrique' => 'Mailqueus de la rubrique',
 );
-
-?>

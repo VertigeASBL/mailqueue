@@ -1,0 +1,19 @@
+[(#REM) Squelette général qui affiche le décompte d'une mailqueueu ]
+
+
+[(#REM) Compter le nombre d'envoie termine ]
+<BOUCLE_envoye(MAILQUEUES_DESTINATAIRES){id_mailqueue}{statut=envoye}>
+  #SET{envoye, #TOTAL_BOUCLE}
+</BOUCLE_envoye>
+
+[(#REM) Compter le nombre d'échec ]
+<BOUCLE_echec(MAILQUEUES_DESTINATAIRES){id_mailqueue}{statut=echec}>
+  #SET{echec, #TOTAL_BOUCLE}
+</BOUCLE_echec>
+
+[(#REM) Affichage ]
+<B_decompte>
+  <BOUCLE_decompte(MAILQUEUES_DESTINATAIRES){id_mailqueue}>
+    #GET{envoye}/#TOTAL_BOUCLE (<:mailqueu:echec_envoie{nb=#GET{echec}}:>)
+  </BOUCLE_decompte>
+</B_decompte>
