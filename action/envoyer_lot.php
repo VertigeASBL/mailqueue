@@ -7,7 +7,9 @@ include_spip('action/editer_objet');
 // Cette fonction est appeler a la fin d'un envoie de lot pour déterminé s'il faut fermer ou non la mailqueue
 function test_fin_queue($id_mailqueue) {
     // On compte le nombre de destinataire dans la mailqueue
-    $destinataires = sql_count('spip_mailqueues_destinataires', 'id_mailqueue='.intval($id_mailqueue));
+    $destinataires = sql_countsel(
+        'spip_mailqueues_destinataires',
+        'id_mailqueue='.intval($id_mailqueue).' AND statut='.sql_quote('attente'));
 
     //Si il n'y a plus de destinataire, rideau !
     if ($destinataires <= 0)
