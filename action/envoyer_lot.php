@@ -24,8 +24,8 @@ function mail_ok($email) {
 }
 
 // Marque un mail non envoyé
-function mail_ok($email) {
-    sql_upadteq(
+function mail_echec($email) {
+    sql_updateq(
         'spip_mailqueues_destinataires',
         array('statut' => 'echec'),
         'email='.sql_quote($email)
