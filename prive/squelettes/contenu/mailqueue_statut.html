@@ -25,12 +25,13 @@
 
 [(#REM) Celle qui sont achevées et les échecs ]
 <B_mailqueues_finie>
+  <h2><:mailqueue:titre_terminer:></h2>
   <table>
     <tr>
-      <th><:mailqueu:ID:></th>
-      <th><:mailqueu:champ_sujet_label:></th>
-      <th><:mailqueu:champ_etat_label:></th>
-      <th><:mailqueu:decompte:></th>
+      <th><:mailqueue:ID:></th>
+      <th><:mailqueue:champ_sujet_label:></th>
+      <th><:mailqueue:champ_etat_label:></th>
+      <th><:mailqueue:decompte:></th>
     </tr>
     <BOUCLE_mailqueues_finie(MAILQUEUES){etat=termine}>
       <tr>

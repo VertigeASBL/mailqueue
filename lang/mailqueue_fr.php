@@ -2,19 +2,53 @@
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
- 
+
+
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
-	// M
-	'mailqueue_titre' => 'API Mailqueue',
+	// A
+	'ajouter_lien_mailqueu' => 'Ajouter cette mailqueu',
 
 	// C
-	'cfg_exemple' => 'Exemple',
-	'cfg_exemple_explication' => 'Explication de cet exemple',
-	'cfg_titre_parametrages' => 'Paramétrages',
+    'champ_ID' => 'ID',
+	'champ_date_start_label' => 'Date de début',
+	'champ_etat_label' => 'Etat',
+	'champ_html_label' => 'html',
+	'champ_sujet_label' => 'Sujet',
+	'champ_texte_label' => 'Texte',
+    'confirm_force_envoie' => "Forcer l'envoie ?",
+
+    // D
+    'decompte' => 'Décompte',
+
+    // E
+    'echec_envoie' => '@nb@ echec',
+
+    // F
+    'force_envoie' => "Forcer l'envoie d'un lot",
+
+	// I
+	'icone_creer_mailqueu' => 'Créer une mailqueu',
+	'icone_modifier_mailqueu' => 'Modifier cette mailqueu',
+	'info_1_mailqueu' => 'Une mailqueu',
+	'info_aucun_mailqueu' => 'Aucune mailqueu',
+	'info_mailqueus_auteur' => 'Les mailqueus de cet auteur',
+	'info_nb_mailqueus' => '@nb@ mailqueus',
+
+	// R
+	'retirer_lien_mailqueu' => 'Retirer cette mailqueu',
+	'retirer_tous_liens_mailqueus' => 'Retirer toutes les mailqueus',
 
 	// T
-	'titre_page_configurer_mailqueue' => 'Configuration de mailqueue',
+	'texte_ajouter_mailqueu' => 'Ajouter une mailqueu',
+	'texte_changer_statut_mailqueu' => 'Cette mailqueu est :',
+	'texte_creer_associer_mailqueu' => 'Créer et associer une mailqueu',
+	'texte_definir_comme_traduction_mailqueu' => 'Cette mailqueu est une traduction de la mailqueu numéro :',
+	'titre_langue_mailqueu' => 'Langue de cette mailqueu',
+	'titre_logo_mailqueu' => 'Logo de cette mailqueu',
+	'titre_mailqueu' => 'Mailqueu',
+	'titre_mailqueus' => 'Mailqueus',
+	'titre_mailqueus_rubrique' => 'Mailqueus de la rubrique',
+    'titre_terminer' => 'Envoie terminé',
+    'titre_envoie' => 'Envoie en cours'
 );
-
-?>

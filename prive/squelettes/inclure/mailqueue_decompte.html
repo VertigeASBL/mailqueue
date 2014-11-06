@@ -14,6 +14,6 @@
 [(#REM) Affichage ]
 <B_decompte>
   <BOUCLE_decompte(MAILQUEUES_DESTINATAIRES){id_mailqueue}>
-    #GET{envoye}/#TOTAL_BOUCLE (<:mailqueu:echec_envoie{nb=#GET{echec}}:>)
+    #GET{envoye}/#TOTAL_BOUCLE (<:mailqueue:echec_envoie{nb=#GET{echec}}:>)
   </BOUCLE_decompte>
 </B_decompte>
