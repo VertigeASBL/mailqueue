@@ -24,6 +24,7 @@ function inc_add_queue_dist($id_mailqueue, $email) {
         'mailqueue_destinataire',
         null,
         array(
+            'id_mailqueue' => $id_mailqueue,
             'email' => $email,
             'statut' => 'attente'
         )
