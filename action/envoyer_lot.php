@@ -16,9 +16,9 @@ function test_fin_queue($id_mailqueue) {
 
 // Marque un mail comme envoyé
 function mail_ok($email) {
-    sql_upadteq(
+    sql_updateq(
         'spip_mailqueues_destinataires',
-        array('statut' => 'envoye'),
+        array('statut' => 'envoye', 'date_envoie' => 'NOW()'),
         'email='.sql_quote($email)
     );
 }
@@ -27,7 +27,7 @@ function mail_ok($email) {
 function mail_echec($email) {
     sql_updateq(
         'spip_mailqueues_destinataires',
-        array('statut' => 'echec'),
+        array('statut' => 'echec', 'date_envoie' => 'NOW()'),
         'email='.sql_quote($email)
     );
 }
