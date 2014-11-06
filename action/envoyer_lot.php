@@ -62,7 +62,7 @@ function action_envoyer_lot_dist() {
         );
 
         foreach ($lot as $email) {
-            $test_envoie = envoyer_mail(
+            $test_envoie = $envoyer_mail(
                 $email['email'],
                 $mailqueue['sujet'],
                 array(
