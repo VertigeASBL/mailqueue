@@ -10,8 +10,8 @@ function test_fin_queue($id_mailqueue) {
     $destinataires = sql_count('spip_mailqueues_destinataires', 'id_mailqueue='.intval($id_mailqueue));
 
     //Si il n'y a plus de destinataire, rideau !
-    if ($destinataire <= 0)
-        objet_modifier('mailqueue', $id_mailqueue, array('statut' => 'termine'));
+    if ($destinataires <= 0)
+        objet_modifier('mailqueue', $id_mailqueue, array('etat' => 'termine'));
 }
 
 // Marque un mail comme envoyé
