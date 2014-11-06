@@ -1,5 +1,28 @@
 [(#REM) Voir les mailqueues ]
 
+<B_mailqueues_envoie>
+  <h2><:mailqueue:titre_envoie:></h2>
+  <table>
+    <tr>
+      <th><:mailqueue:ID:></th>
+      <th><:mailqueue:champ_sujet_label:></th>
+      <th><:mailqueue:champ_etat_label:></th>
+      <th><:mailqueue:decompte:></th>
+    </tr>
+    <BOUCLE_mailqueues_envoie(MAILQUEUES){etat=envoie}>
+      <tr>
+        <td>#ID_MAILQUEUE</td>
+        <td>#SUJET</td>
+        <td>#ETAT</td>
+        <td>
+          #INCLURE{fond=prive/squelettes/inclure/mailqueue_decompte, env, id_mailqueue}
+        </td>
+      </tr>
+    </BOUCLE_mailqueues_envoie>
+  </table>
+</B_mailqueues_envoie>
+
+
 [(#REM) Celle qui sont achevées et les échecs ]
 <B_mailqueues_finie>
   <table>
