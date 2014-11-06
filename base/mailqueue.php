@@ -24,7 +24,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 function mailqueue_declarer_tables_interfaces($interfaces) {
 
 	$interfaces['table_des_tables']['mailqueues'] = 'mailqueues';
-	$interfaces['table_des_tables']['mailqueue_destinataires'] = 'mailqueues_destinataires';
+	$interfaces['table_des_tables']['mailqueues_destinataires'] = 'mailqueues_destinataires';
 
 	return $interfaces;
 }
